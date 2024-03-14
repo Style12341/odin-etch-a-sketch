@@ -55,7 +55,7 @@ input{
     margin:0;
 }
 #grid-container{
-width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,13 +8,20 @@ function makeGrid(rows, cols) {
       cell.className = "cell";
       cell.addEventListener("mouseenter", (e) => {
         if (e.ctrlKey) {
-          cell.style.backgroundColor = "white";
-        } else cell.style.backgroundColor = "black";
+          cell.style.backgroundColor = brushColor;
+        } else cell.style.backgroundColor = brushColor;
       });
       row.appendChild(cell);
     }
     gridContainer.appendChild(row);
   }
 }
+let brushColor = "black";
+let colorPicker = document.querySelector("#color-picker");
 let gridContainer = document.querySelector("#grid-container");
+
+colorPicker.addEventListener("input", (e) => {
+  brushColor = e.target.value;
+});
+
 makeGrid(16, 16);

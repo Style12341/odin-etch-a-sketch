@@ -22,9 +22,7 @@ body{
     padding:0;
 }
 #grid-container{
-    padding: 60px 120px;
-    flex:1 0 50%;
-    aspect-ratio: 1/1;
+width: 960px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +34,6 @@ body{
     justify-content: center;
 }
 .cell{
-    flex:1 1 100px;
     display:flex;
     justify-content: center;
     align-items: center;

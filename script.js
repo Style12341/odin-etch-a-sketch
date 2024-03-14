@@ -11,4 +11,5 @@ function makeGrid(rows, cols) {
     gridContainer.appendChild(row);
   }
 }
-makeGrid(3, 3);
+let gridContainer = document.querySelector("#grid-container");
+makeGrid(30, 30);

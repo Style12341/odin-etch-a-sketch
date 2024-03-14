@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 html{
     display:flex;
     margin: 0px;
@@ -32,13 +34,15 @@ header{
 .left{
     display:flex;
     align-items: center;
-    gap:16px;
+    gap:6px;
 }
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap:10px;
+    justify-content: space-between;
+    align-items:center;
+    gap:5px;
+    height:50px;
 }
 .right{
     display: flex;
@@ -47,6 +51,8 @@ header{
 }
 input{
     width:50px;
+    padding:0;
+    margin:0;
 }
 #grid-container{
 width: 50%;

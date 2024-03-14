@@ -23,9 +23,10 @@ function makeGrid(rows, cols) {
           let g = Math.floor(Math.random() * 255) + 1;
           let b = Math.floor(Math.random() * 255) + 1;
           brushColor = `rgb(${r},${g},${b},${opacity})`;
-          colorPicker.value = brushColor;
         } else {
-          let RGBArray = colorPicker.value.slice(4, 9).split(",")[0];
+          console.log(brushColor);
+          let RGBArray = brushColor.slice(4, brushColor.length).split(",");
+          console.log(RGBArray);
           brushColor = `rgb(${RGBArray[0]},${RGBArray[1]},${RGBArray[2]},${opacity})`;
         }
         if (e.ctrlKey) {
@@ -67,7 +68,10 @@ randomRGB.addEventListener("click", (e) => {
   }
 });
 colorPicker.addEventListener("input", (e) => {
-  brushColor = e.target.value;
+  const r = parseInt(e.target.value.slice(1, 3), 16);
+  const g = parseInt(e.target.value.slice(3, 5), 16);
+  const b = parseInt(e.target.value.slice(5, 7), 16);
+  brushColor = `rgb(${r},${g},${b},1)`;
 });
 gridSizeInput.addEventListener("input", (e) => {
   if (e.target.value < 1) e.target.value = 1;

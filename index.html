@@ -9,7 +9,28 @@
   </head>
   <body>
     <header>
+      <div class="left">
+        <div class="card">
+          <label for="color-picker">Choose a color:</label>
+          <label for="grid-size">Enter grid size:</label>
+        </div>
+        <div class="card">
+          <input type="color" name="color-picker" />
+          <input type="number" name="grid-size" />
+        </div>
+      </div>
       <h1>Etch a Skecth!</h1>
+      <div class="right">
+        <button id="reset">Reset</button>
+        <div class="card">
+          <button id="randomize">Random RGB</button>
+          <div class="randomize-state">OFF</div>
+        </div>
+        <div class="card">
+          <button id="progressive">Progressive</button>
+          <div class="progressive-state">OFF</div>
+        </div>
+      </div>
     </header>
     <div id="grid-container"></div>
     <footer>Created by Bernard Maximiliano</footer>

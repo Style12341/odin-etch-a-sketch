@@ -9,8 +9,7 @@ function makeGrid(rows, cols) {
       cell.addEventListener("mouseenter", (e) => {
         if (e.ctrlKey) {
           cell.style.backgroundColor = "white";
-        }else
-        cell.style.backgroundColor = "black";
+        } else cell.style.backgroundColor = "black";
       });
       row.appendChild(cell);
     }
@@ -18,4 +17,4 @@ function makeGrid(rows, cols) {
   }
 }
 let gridContainer = document.querySelector("#grid-container");
-makeGrid(30, 30);
+makeGrid(16, 16);

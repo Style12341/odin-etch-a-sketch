@@ -25,13 +25,18 @@ function makeGrid(rows, cols) {
     gridContainer.appendChild(row);
   }
 }
-makeGrid(16, 16);
 let brushColor = "black";
 let colorPicker = document.querySelector("#color-picker");
 let gridContainer = document.querySelector("#grid-container");
 let gridSizeInput = document.querySelector("#grid-size");
 let randomRGB = document.querySelector("#random-rgb");
-
+let resetButton = document.querySelector("#reset");
+let size = 16;
+makeGrid(size, size);
+resetButton.addEventListener("click", () => {
+  gridContainer.innerHTML = "";
+  makeGrid(size, size);
+});
 randomRGB.addEventListener("click", (e) => {
   let state = document.querySelector(".random-state");
   if (state.textContent === "OFF") {
@@ -46,7 +51,7 @@ colorPicker.addEventListener("input", (e) => {
 gridSizeInput.addEventListener("input", (e) => {
   if (e.target.value < 1) e.target.value = 1;
   if (e.target.value > 100) e.target.value = 100;
-  let size = e.target.value;
+  size = e.target.value;
   gridContainer.innerHTML = "";
   makeGrid(size, size);
 });

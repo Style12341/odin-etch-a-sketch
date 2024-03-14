@@ -16,12 +16,18 @@ function makeGrid(rows, cols) {
     gridContainer.appendChild(row);
   }
 }
+makeGrid(16, 16);
 let brushColor = "black";
 let colorPicker = document.querySelector("#color-picker");
 let gridContainer = document.querySelector("#grid-container");
-
+let gridSizeInput = document.querySelector("#grid-size");
 colorPicker.addEventListener("input", (e) => {
   brushColor = e.target.value;
 });
-
-makeGrid(16, 16);
+gridSizeInput.addEventListener("input", (e) => {
+  if (e.target.value < 1) e.target.value = 1;
+  if (e.target.value > 100) e.target.value = 100;
+  let size = e.target.value;
+  gridContainer.innerHTML = "";
+  makeGrid(size, size);
+});

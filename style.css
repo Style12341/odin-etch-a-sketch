@@ -65,6 +65,8 @@ width: 50%;
     border: 1px solid #000;
     display:flex;
     justify-content: center;
+    border-bottom: 0.5px;
+    border-top:0.5px;
 }
 .cell{
     display:flex;
